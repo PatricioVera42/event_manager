@@ -4,27 +4,29 @@
   <title>Thank You!</title>
 </head>
 <body>
-  <h1>Thanks <%= name %></h1>
+  <h1>Thanks Nash</h1>
   <p>Thanks for coming to our conference.  We couldn't have done it without you!</p>
-  <p> phonenumber: <%= phone_number %><p>
+  <p> phonenumber: (206) 226-3000<p>
   <p>
     Political activism is at the heart of any democracy and your voice needs to be heard.
     Please consider reaching out to your following representatives:
   </p>
 
   <table>
-    <% if legislators.kind_of?(Array) %>
+    
       <th>Name</th><th>Website</th>
-        <% legislators.each do |legislator| %>
+        
         <tr>
-          <td><%= "#{legislator.name}" %></td>
-          <td><%= "#{legislator.urls.join(" ")}" unless legislator.urls.nil? %></td>
+          <td>Maria Cantwell</td>
+          <td>https://www.cantwell.senate.gov/ https://en.wikipedia.org/wiki/Maria_Cantwell</td>
         </tr>
-        <% end %>
-    <% else %>
-      <th></th>
-      <td><%= "#{legislators}" %></td>
-    <% end %>
+        
+        <tr>
+          <td>Patty Murray</td>
+          <td>https://www.murray.senate.gov/ https://en.wikipedia.org/wiki/Patty_Murray</td>
+        </tr>
+        
+    
   </table>
 </body>
 </html>
